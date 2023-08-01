@@ -1,7 +1,24 @@
-Polyphony Options for TASCAM 4x4HR USB audio card
+Polyphony Options for TASCAM 4x4HR USB audio card on linux
 
 This utility uses libusb-1.0 to setup the TASCAM 4x4HR options via USB control trasfers.
 
 You may need following packages installed: libusb-1.0-0, libusb-1.0-0-dev 
 
+Example:
 
+#set ports to mono:
+./potascam --stereo-mode12 0
+./potascam --stereo-mode34 0
+
+#disable loopback mode
+./potascam --disable-loopback
+
+#enable inputs:
+./potascam --enable-input 1
+./potascam --enable-input 2
+./potascam --enable-input 3
+./potascam --enable-input 4
+
+#set outputs to computer output
+./potascam --lineout12
+./potascam --lineout34
